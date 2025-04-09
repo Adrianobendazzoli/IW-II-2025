@@ -10,8 +10,8 @@
         function exibirMenu() {
             return prompt(
                 "===== MENU INTERATIVO =====\n" +
-                "1 - Ver mensagem\n" +
-                "2 - Calcular soma\n" +
+                "1 - Ver mensagem personalizada\n" +
+                "2 - Calcular média de duas notas\n" +
                 "3 - Sair\n" +
                 "Escolha uma opção:"
             );
@@ -20,7 +20,8 @@
         function executarOpcao(opcao) {
             switch (opcao) {
                 case "1":
-                    alert("Olá! Bem-vindo ao menu interativo.");
+                var nome = prompt("Digite o seu nome:");    
+                alert("Olá " + nome + " ! Bem-vindo ao menu interativo.");
                     break;
                 case "2":
                     let num1 = parseFloat(prompt("Digite o primeiro número:"));
@@ -28,7 +29,8 @@
                     if (isNaN(num1) || isNaN(num2)) {
                         alert("Erro: Você deve digitar números válidos.");
                     } else {
-                        alert(`A soma é: ${num1 + num2}`);
+                        var media = (num1 + num2) / 2
+                        alert("A média é: " + media  );
                     }
                     break;
                 case "3":
